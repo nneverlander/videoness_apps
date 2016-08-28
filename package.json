@@ -1,0 +1,23 @@
+{
+  "name": "videoness",
+  "version": "1.0.0",
+  "description": "hot pumpkin",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/aditcoding/videoness.git"
+  },
+  "author": {
+    "name": "Adi Kancherla",
+    "email": "findadit@gmail.com"
+  },
+  "license": "ISC",
+  "scripts": {
+    "start": "react-native start"
+  },
+  "dependencies": {
+    "react": "^15.1.0",
+    "react-native": "^0.27.2",
+    "react-native-code-push": "^1.14.5-beta"
+  }
+}
