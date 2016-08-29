@@ -1,7 +1,6 @@
 /**
  * Sample React Native App
  * https://github.com/facebook/react-native
- * @flow
  */
 
 import React, { Component } from 'react';
@@ -33,14 +32,14 @@ class Project extends Component {
             fontSize: 17,
             fontWeight: 'normal',
             fontFamily: 'Helvetica Neue',
-          }}>
-         first component yoyo yoyo
+          }}>  
+         first component
         </Text>
-        <SegmentedControlIOS 
+        <SegmentedControlIOS
           values={['A', 'B', 'C']}
           momentary={true}
           tintColor={'black'}
-          style={{
+          style={{  
             width: 100,
           }}
           selectedIndex={(this.state && this.state.scIndex) || 0}
