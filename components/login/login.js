@@ -1,9 +1,10 @@
 /**
  * Created by adi on 8/28/16.
  */
-import {React, Text, View, TextInput, TouchableHighlight, ActivityIndicator} from 'react-native';
+import React from 'react';
+import {Text, View, TextInput, TouchableHighlight, ActivityIndicator} from 'react-native';
 
-const styles = require('loginStyles');
+const styles = require('./loginStyles');
 
 var Login = React.createClass({
   getInitialState() {
@@ -187,7 +188,7 @@ var Login = React.createClass({
                 <Text style={this.state.resetEmailNotFound ? styles.invalidInput : styles.hidden}>email not found</Text>
                 <TouchableHighlight>
                   <View>
-                    <Text onPress={this.validateResetEmail} style={styles.loginBtn}>reset password</Text>
+                    <Text onPress={this.validateResetEmail} style={styles.loginBtn}>reset password </Text>
                     <Text onPress={this.showLoginBox} style={styles.loginBtn}>cancel</Text>
                   </View>
                 </TouchableHighlight>
@@ -207,7 +208,7 @@ var Login = React.createClass({
                 <TextInput onChangeText={this.setEmail} value={this.state.email}
                        style={styles.input} ref={(v) => this.email = v} placeholder="email"/>
                 <Text style={this.state.invalidEmail ? styles.invalidInput : styles.hidden}>invalid email</Text>
-                <TextInput secureTextEntry=true onChangeText={this.setPass} value={this.state.pass}
+                <TextInput secureTextEntry={true} onChangeText={this.setPass} value={this.state.pass}
                  style={styles.input} ref={(v) => this.pass = v}
                  placeholder="password (atleast 7 characters)"/>
                 <Text style={this.state.invalidPass ? styles.invalidInput : styles.hidden}>password has fewer than 7 chars</Text>
@@ -218,7 +219,7 @@ var Login = React.createClass({
               </View>
             </View>
             <View>
-              <Text style={styles.tos}>by logging in you are agreeing to our <TouchableHighlight><Text target="_blank" href="tos.html">terms of use</Text></TouchableHighlight></Text>
+              <Text style={styles.tos}>by logging in you are agreeing to our <Text>terms of use</Text></Text>
               <TouchableHighlight><Text style={styles.forgotPassword} onPress={this.showForgotPasswordBox}>forgot password?</Text></TouchableHighlight>
             </View>
           </View>
@@ -228,4 +229,4 @@ var Login = React.createClass({
   }
 });
 
-module.exports = Login;
+export default Login;

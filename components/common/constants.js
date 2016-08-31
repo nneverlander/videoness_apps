@@ -10,4 +10,4 @@ const CONSTANTS = {
   "VID_METADATA_REF": 'DwjUe-videoMetadata-0TEwM'
 };
 
-module.exports = CONSTANTS;
+export default CONSTANTS;

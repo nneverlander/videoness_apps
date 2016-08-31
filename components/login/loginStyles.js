@@ -3,9 +3,9 @@ import {StyleSheet} from 'react-native';
 const styles = StyleSheet.create({
   fbButton: {
     position: 'relative',
-    margin: 'auto',
+    margin: 10,
     height: 40,
-    padding: 2 11 2 10,
+    padding: 5,
     borderWidth: 1,
     borderStyle: 'solid',
     borderColor: '#264285',
@@ -40,10 +40,9 @@ const styles = StyleSheet.create({
     fontSize: 20
   },
   invalidInput: {
-    zIndex: 2,
     right: 0,
     color: 'white',
-    backgroundColor: rgba(180, 1, 1, 0.85),
+    backgroundColor: 'rgba(180, 1, 1, 0.85)',
     fontSize: 15,
     padding: 5,
     borderRadius: 5
@@ -65,14 +64,13 @@ const styles = StyleSheet.create({
   },
   vidSpinnerBg: {
     height: 0,
-    width: 0
+    width: 0,
     position: 'absolute',
     top: 0,
     left: 0,
     right: 0,
     bottom: 0,
-    background-color: rgba(255, 255, 255, 0.7),
-    zIndex: 3,
+    backgroundColor: 'rgba(255, 255, 255, 0.7)',
     color: 'white',
     borderRadius: 5
   },
@@ -84,4 +82,4 @@ const styles = StyleSheet.create({
   }
 });
 
-module.exports = styles;
+export default styles;

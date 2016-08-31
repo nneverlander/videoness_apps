@@ -1,4 +1,4 @@
 import {AppRegistry} from 'react-native';
-const index = require('./components/index/index');
+import Index from './components/index/index';
 
-AppRegistry.registerComponent('Videoness', index);
+AppRegistry.registerComponent('Videoness', () => Index);

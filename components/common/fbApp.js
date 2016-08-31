@@ -12,4 +12,4 @@ const config = {
 
 const fbApp = firebase.initializeApp(config);
 
-module.exports = fbApp;
+export default fbApp;

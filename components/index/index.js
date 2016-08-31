@@ -1,17 +1,20 @@
 /**
  * Created by adi on 8/30/16.
  */
-import React from 'react-native';
+import React from 'react';
 import Login from '../login/login';
 import Main from '../main/main';
 import fbApp from '../common/fbApp';
+import {View} from 'react-native';
 
 var Index = React.createClass({
   getInitialState() {
-    isLoggedIn: false
+    return {
+      isLoggedIn: false
+    };
   },
   componentDidMount() {
-    initApp();
+    this.initApp();
   },
   initApp() {
     fbApp.auth().onAuthStateChanged((user) => {
@@ -33,16 +36,16 @@ var Index = React.createClass({
     if (this.state.isLoggedIn) {
         return (
           <View>
-            <Login/>
+            <Main/>
           </View>
         );
     }
     return (
       <View>
-        <Main/>
+        <Login/>
       </View>
     );
   }
 });
 
-module.exports = Index;
+export default Index;
